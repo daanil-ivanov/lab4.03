@@ -1,7 +1,6 @@
 # данный код обрабатывает изображения формата .tiff для лабораторной работы 4.03
 
 from PIL import Image
-import math
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.signal import find_peaks
@@ -121,7 +120,7 @@ x = np.linspace(R_d[dist:][peaks][:n][0], R_d[dist:][peaks][:n][-1], 5000)
 curve_fit = sinc(x, *popt)
 plt.plot(x, curve_fit, color='red', label='sinc')
 
-# эмпирически подобрали, что A = 0.87 )))) для жёлтого
+# эмпирически подобрали, что A = 0.87 для жёлтого
 
 plt.legend(loc='best')
 plt.show()
